@@ -14,7 +14,7 @@ public class Pattern {
         int count = 1;
         int j = 0;
 
-        ArrayList<Integer> b = new ArrayList<>();
+        ArrayList <Integer> b = new ArrayList <>();
 
         int[] array1 = new int[40];
 

@@ -10,12 +10,12 @@ public class PrimeNumber {
     public static void main(String[] args) {
 
         System.out.println("\f");
-        int [ ] array = new int [1229]; //There are 1229 prime numbers from 2 to 10000
+        int[] array = new int[1229]; //There are 1229 prime numbers from 2 to 10000
         int x = 0;
-        int i =2;
-        while(x<1229){
-            if(is_prime(i)){
-                array [x] = i;
+        int i = 2;
+        while (x < 1229) {
+            if (is_prime(i)) {
+                array[x] = i;
                 System.out.println(array[x] + "\t");
                 x++;
             }
@@ -23,7 +23,7 @@ public class PrimeNumber {
         }
 
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
-        List<String> lowestValue = new ArrayList<String>();
+        List <String> lowestValue = new ArrayList <String>();
         try {
             connectToSqlDB.insertDataFromArrayToSqlTable(array, "tbl_primeNumber", "column_primeNumber");
             lowestValue = connectToSqlDB.readDataBase("tbl_primenumber", "column_primeNumber");
@@ -32,15 +32,15 @@ public class PrimeNumber {
             e.printStackTrace();
         }
         System.out.println("Data is reading from the Table (tbl_primenumber) and displaying to the console");
-        for(String st:lowestValue){
+        for (String st : lowestValue) {
             System.out.println(st);
         }
     }
 
     public static boolean is_prime(int num) //determines if number is prime
     {
-        for(int i=2; i<num; i++)
-            if(num%i==0)
+        for (int i = 2; i < num; i++)
+            if (num % i == 0)
                 return false;
         return true;
 

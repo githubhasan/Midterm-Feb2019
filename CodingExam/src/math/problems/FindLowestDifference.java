@@ -12,7 +12,7 @@ public class FindLowestDifference {
         int n = array2.length;
 
 
-        System.out.println("The Lowest Difference between cells is : "+findSmallestDifference(array1, array2, m, n));
+        System.out.println("The Lowest Difference between cells is : " + findSmallestDifference(array1, array2, m, n));
     }
 
     static int findSmallestDifference(int A[], int B[], int m, int n) {
@@ -22,8 +22,7 @@ public class FindLowestDifference {
 
         int result = Integer.MAX_VALUE;
 
-        while (a < m && b < n)
-        {
+        while (a < m && b < n) {
             if (Math.abs(A[a] - B[b]) < result)
                 result = Math.abs(A[a] - B[b]);
             if (A[a] < B[b])

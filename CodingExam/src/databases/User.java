@@ -7,11 +7,11 @@ public class User {
 
     public User() {
     }
-
-    public User(String stName, String stID) {
-        this.stName = stName;
-        this.stID = stID;
-    }
+//
+//    public User(String stName, String stID) {
+//        this.stName = stName;
+//        this.stID = stID;
+//    }
 
     public User(String stName, String stID, String stDOB) {
         this.stName = stName;

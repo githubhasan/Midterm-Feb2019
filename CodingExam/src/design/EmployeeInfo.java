@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo extends AbstractOOP{
+public class EmployeeInfo extends AbstractOOP {
 
     /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
      * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -39,16 +39,16 @@ public class EmployeeInfo extends AbstractOOP{
 
      * Must implement below constructor.
      */
-    public EmployeeInfo(int employeeId){
-        this.employeeId=employeeId;
+    public EmployeeInfo(int employeeId) {
+        this.employeeId = employeeId;
     }
-    public EmployeeInfo(String name, int employeeId){
+
+    public EmployeeInfo(String name, int employeeId) {
         this.employeeName = employeeName;
         this.employeeId = employeeId;
     }
 
     // constructor that uses the super keyword to invoke the parent class constructor
-
 
 
     public int employeeId() {
@@ -126,7 +126,7 @@ public class EmployeeInfo extends AbstractOOP{
      * So you probably need to send 2 arguments.
      *
      */
-    public static double calculateEmployeeBonus(double salary, int performance){
+    public static double calculateEmployeeBonus(double salary, int performance) {
         double yearlyBonus = 0;
         if (performance == 5) {
             yearlyBonus = salary * 0.1 * 12;

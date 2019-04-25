@@ -3,8 +3,7 @@ package string.problems;
 import java.util.Scanner;
 
 public class Palindrome {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         String original, reverse = ""; // Objects of String class
         Scanner in = new Scanner(System.in);
 

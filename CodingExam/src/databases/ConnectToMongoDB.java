@@ -17,7 +17,7 @@ public class ConnectToMongoDB {
 
     public static MongoDatabase connectToMongoDB() {
         MongoClient mongoClient = new MongoClient();
-        mongoDatabase = mongoClient.getDatabase("students");
+        mongoDatabase = mongoClient.getDatabase("StudentsInfo");
         System.out.println("Database Connected");
 
         return mongoDatabase;
@@ -26,7 +26,7 @@ public class ConnectToMongoDB {
     public static String insertIntoToMongoDB(User user) {
         String profile = user.getStName();
         MongoDatabase mongoDatabase = connectToMongoDB();
-        MongoCollection<Document> collection = mongoDatabase.getCollection("profile");
+        MongoCollection <Document> collection = mongoDatabase.getCollection("StudentsInfo");
         Document document = new Document().append("stName", user.getStName()).append("stID", user.getStID()).
                 append("stDOB", user.getStDOB());
         collection.insertOne(document);
@@ -37,7 +37,7 @@ public class ConnectToMongoDB {
         List<User> list = new ArrayList<User>();
         User user = new User();
         MongoDatabase mongoDatabase = connectToMongoDB();
-        MongoCollection<Document> collection = mongoDatabase.getCollection("profile");
+        MongoCollection <Document> collection = mongoDatabase.getCollection("StudentsInfo");
         BasicDBObject basicDBObject = new BasicDBObject();
         FindIterable<Document> iterable = collection.find(basicDBObject);
         for (Document doc : iterable) {
@@ -54,7 +54,7 @@ public class ConnectToMongoDB {
     }
 
     public static void main(String[] args) {
-        insertIntoToMongoDB(new User("Naomi Chan", "4493", "07-1996"));
+        insertIntoToMongoDB(new User("MD S HASAN", "4493", "07-1996"));
         List<User> user = readUserProfileFromMongoDB();
         for (User person : user) {
             System.out.println(person.getStName() + " " + person.getStID());

@@ -16,7 +16,7 @@ public class LowestNumber {
 
         System.out.println("lowest number from array is :" + LowestNumber.lowest(array));
 
-        ArrayList<Integer> arrList = new ArrayList<>();
+        ArrayList <Integer> arrList = new ArrayList <>();
         arrList.add(LowestNumber.lowest(array));
 
         List list = arrList;
@@ -25,7 +25,7 @@ public class LowestNumber {
 
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
         connectToSqlDB.insertDataFromArrayListToSqlTable(numList2, "tbl_lowestNumber", "column_lowestNumber");
-        List<String> numbers = connectToSqlDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+        List <String> numbers = connectToSqlDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
 
         for (String st : numbers) {
             System.out.println(st);

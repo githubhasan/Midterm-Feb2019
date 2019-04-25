@@ -72,7 +72,6 @@ public class ProcessStudentInfo {
         }
 
 
-
         //Connect to MySQL database
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 
@@ -83,7 +82,7 @@ public class ProcessStudentInfo {
         //Store Qtp data into Qtp table in Database
         for (Object str : list.keySet()) {
             for (Object str1 : list.get(str)) {
-                List<String> list1 = new ArrayList<String>();
+                List <String> list1 = new ArrayList <String>();
                 list1.add(str.toString());
                 list1.add(str1.toString());
 
@@ -97,13 +96,13 @@ public class ProcessStudentInfo {
 
         //Retrieve Selenium and Qtp students from Database
 
-        List<String> numbers = (List <String>) connectToSqlDB.readDataBase("tbl_Selenium", "mapKey", "mapValue");
+        List <String> numbers = (List <String>) connectToSqlDB.readDataBase("tbl_Selenium", "mapKey", "mapValue");
         for (String st : numbers) {
             System.out.println(st);
 
         }
 
-        List<String> numbers1 = connectToSqlDB.readDataBase("tbl_Qtp", "mapKey", "mapValue");
+        List <String> numbers1 = connectToSqlDB.readDataBase("tbl_Qtp", "mapKey", "mapValue");
         for (String st : numbers1) {
             System.out.println(st);
         }

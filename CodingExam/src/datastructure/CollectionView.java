@@ -22,7 +22,7 @@ public class CollectionView {
 
         System.out.println("Collection view of map is retrieved as follows : ");
 
-        for(Map.Entry<Integer,String> colView: map.entrySet()){
+        for (Map.Entry <Integer, String> colView : map.entrySet()) {
             System.out.println(colView);
         }
     }
