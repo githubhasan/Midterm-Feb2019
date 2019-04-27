@@ -27,7 +27,7 @@ public class DataReader {
          */
 
 
-        String textFile = "/Users/Mahmud Khan/IdeaProjects/MidtermNovember2018/src/data/self-driving-car";
+        String textFile = "/Users/mdhasan/Desktop/Midterm-Feb2019/CodingExam/src/data/self-driving-car";
         FileReader fr = null;
         BufferedReader br = null;
 
