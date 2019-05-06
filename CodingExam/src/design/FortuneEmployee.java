@@ -25,11 +25,11 @@ public class FortuneEmployee {
         String mission = "We want to maintain 15% yearly growth of the company.";
         String vision = "We want to contribute for the betterment of economy of the country.";
 
-        EmployeeInfo employee1 = new EmployeeInfo("Cristiano Ronaldo", 222100);
-        EmployeeInfo employee2 = new EmployeeInfo("Lionel Messi", 222101);
-        EmployeeInfo employee3 = new EmployeeInfo("Zinedine Zidane", 222102);
-        EmployeeInfo employee4 = new EmployeeInfo("Adson Pele", 222103);
-        EmployeeInfo employee5 = new EmployeeInfo("Diego Maradona", 222104);
+        EmployeeInfo employee1 = new EmployeeInfo("Md Faruque", 222100);
+        EmployeeInfo employee2 = new EmployeeInfo("Md Shahkamal", 222101);
+        EmployeeInfo employee3 = new EmployeeInfo("Md hasan", 222102);
+        EmployeeInfo employee4 = new EmployeeInfo("Md Rasel", 222103);
+        EmployeeInfo employee5 = new EmployeeInfo("Md Kayser", 222104);
 
         employee1.assignDepartment("Research & Development");
         employee2.assignDepartment("Information Technology");
@@ -81,7 +81,7 @@ public class FortuneEmployee {
 
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 
-        connectToSqlDB.createTableFromStringToMySql("employee_record", "employee_id", "employee_info");
+        connectToSqlDB.createTableFromStringToMySql("employee_record", "ID", "employee_info");
 
 
         for (Integer obj : employeeInfo.keySet()) {
@@ -90,12 +90,12 @@ public class FortuneEmployee {
                 List <String> list1 = new ArrayList <>();
                 list1.add(obj.toString());
                 list1.add(obj.toString());
-                connectToSqlDB.InsertDataFromArrayListToMySql(list1, "employee_record", "employee_id", "employee_info");
+                connectToSqlDB.InsertDataFromArrayListToMySql(list1, "employee_record", "ID", "employee_info");
             }
         }
 
         System.out.println("Reading from database");
-        List <String> empRec = connectToSqlDB.readDataBase("employee_record", "employee_id", "employee_info");
+        List <String> empRec = connectToSqlDB.readDataBase("employee_record", "ID", "employee_info");
         for (String emp : empRec) {
             System.out.println(emp);
         }
