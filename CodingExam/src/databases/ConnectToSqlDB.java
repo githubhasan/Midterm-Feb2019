@@ -102,8 +102,7 @@ public class ConnectToSqlDB {
         }
         return dataList;
     }
-
-    /*public void insertDataFromArrayToSqlTable(int [] ArrayData, String tableName, String columnName)
+/*public void insertDataFromArrayToSqlTable(int [] ArrayData, String tableName, String columnName)
     {
         try {
             connectToSqlDatabase();
@@ -125,6 +124,7 @@ public class ConnectToSqlDB {
             e.printStackTrace();
         }
     }*/
+
 
     public void insertDataFromArrayToSqlTable(int[] ArrayData, String tableName, String columnName)
     {
@@ -316,7 +316,7 @@ public class ConnectToSqlDB {
         try {
             connectToSqlDatabase();
             ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
-            ps.setString(1,"Ankita Sing");
+            ps.setString(1,"Md Faruque");
             ps.setInt(2,3590);
             ps.executeUpdate();
 
